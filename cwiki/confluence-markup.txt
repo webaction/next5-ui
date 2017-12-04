@@ -300,6 +300,52 @@ Error
         {code}
     ----
 
+    h3. sportsSportIdLeaguesLeagueIdFixturesGet
+    {status:colour=Yellow|title=get|subtle=false}
+    {code}
+    get /sports/{sportId}/leagues/{leagueId}/fixtures
+    {code}
+    *Summary:* 
+    *Description:* Returns 
+
+
+    h4. Parameters
+        h5. Path Parameters
+        ||Name||Description||Required||Default||Pattern||
+        |sportId |Numeric ID of the sport |(/) | |  |
+
+|leagueId |Numeric ID of the leagues |(/) | |  |
+
+
+
+
+
+
+
+
+    h4. Responses
+        *Status Code:* 200
+        *Message:*     league response
+        {code:title=Response Type}
+array[Leagues]
+        {code}
+        See [#models]
+
+
+
+        {code:title=Response Schema |collapse=true}
+{
+  "description" : "league response",
+  "schema" : {
+    "type" : "array",
+    "items" : {
+      "$ref" : "#/definitions/Leagues"
+    }
+  }
+}
+        {code}
+    ----
+
 h2. Models
 
         h3. Error
