@@ -1,0 +1,320 @@
+h1. Mapping A Mapping API that uses a In Game Multi Mapping System
+
+*Version:* 1.0.0
+
+----
+
+{toc:printable=true|style=square|minLevel=2|maxLevel=3|type=list|outline=false|include=.*}
+
+h2. Endpoints
+
+    h3. addSport
+    {status:colour=Yellow|title=post|subtle=false}
+    {code}
+    post /sports
+    {code}
+    *Summary:* 
+    *Description:* Creates a new sport in the system.  Duplicates are not allowed
+
+
+    h4. Parameters
+
+        h5. Body Parameter
+        ||Name||Description||Required||Default||Pattern||
+        |sport |Sport to add to the store |(/) | |  |
+
+
+
+
+
+
+
+    h4. Responses
+        *Status Code:* 200
+        *Message:*     sport response
+        {code:title=Response Type}
+Sport
+        {code}
+        See [#models]
+
+
+
+        {code:title=Response Schema |collapse=true}
+{
+  "description" : "sport response",
+  "schema" : {
+    "$ref" : "#/definitions/Sport"
+  }
+}
+        {code}
+        *Status Code:* 0
+        *Message:*     unexpected error
+        {code:title=Response Type}
+Error
+        {code}
+        See [#models]
+
+
+
+        {code:title=Response Schema |collapse=true}
+{
+  "description" : "unexpected error",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        {code}
+    ----
+
+    h3. deletePet
+    {status:colour=Yellow|title=delete|subtle=false}
+    {code}
+    delete /sports/{id}
+    {code}
+    *Summary:* 
+    *Description:* deletes a single sport based on the ID supplied
+
+
+    h4. Parameters
+        h5. Path Parameters
+        ||Name||Description||Required||Default||Pattern||
+        |id |ID of sport to delete |(/) | |  |
+
+
+
+
+
+
+
+
+    h4. Responses
+        *Status Code:* 204
+        *Message:*     sport deleted
+        {code:title=Response Type}
+
+        {code}
+        See [#models]
+
+
+
+        {code:title=Response Schema |collapse=true}
+{
+  "description" : "sport deleted"
+}
+        {code}
+        *Status Code:* 0
+        *Message:*     unexpected error
+        {code:title=Response Type}
+Error
+        {code}
+        See [#models]
+
+
+
+        {code:title=Response Schema |collapse=true}
+{
+  "description" : "unexpected error",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        {code}
+    ----
+
+    h3. find sport by id
+    {status:colour=Yellow|title=get|subtle=false}
+    {code}
+    get /sports/{id}
+    {code}
+    *Summary:* 
+    *Description:* Returns a user based on a single ID, if the user does not have access to the pet
+
+
+    h4. Parameters
+        h5. Path Parameters
+        ||Name||Description||Required||Default||Pattern||
+        |id |ID of sport to fetch |(/) | |  |
+
+
+
+
+
+
+
+
+    h4. Responses
+        *Status Code:* 200
+        *Message:*     pet response
+        {code:title=Response Type}
+Sport
+        {code}
+        See [#models]
+
+
+
+        {code:title=Response Schema |collapse=true}
+{
+  "description" : "pet response",
+  "schema" : {
+    "$ref" : "#/definitions/Sport"
+  }
+}
+        {code}
+        *Status Code:* 0
+        *Message:*     unexpected error
+        {code:title=Response Type}
+Error
+        {code}
+        See [#models]
+
+
+
+        {code:title=Response Schema |collapse=true}
+{
+  "description" : "unexpected error",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        {code}
+    ----
+
+    h3. findLeagues
+    {status:colour=Yellow|title=get|subtle=false}
+    {code}
+    get /sports/{sportId}/leagues
+    {code}
+    *Summary:* 
+    *Description:* Returns all sports from the system that the user has access to. 
+
+
+    h4. Parameters
+        h5. Path Parameters
+        ||Name||Description||Required||Default||Pattern||
+        |sportId |Numeric ID of the sport |(/) | |  |
+
+
+
+
+        h5. Query Parameters
+        ||Name||Description||Required||Default||Pattern||
+        |ids |Ids to filter by |(x) | |  |
+
+|tags |Tags to filter by |(x) | |  |
+
+|limit |Amount of results (default: 50) (maximum: 250)  |(x) | |  |
+
+|page |Page to show |(x) | |  |
+
+
+
+
+
+    h4. Responses
+        *Status Code:* 200
+        *Message:*     league response
+        {code:title=Response Type}
+array[Leagues]
+        {code}
+        See [#models]
+
+
+
+        {code:title=Response Schema |collapse=true}
+{
+  "description" : "league response",
+  "schema" : {
+    "type" : "array",
+    "items" : {
+      "$ref" : "#/definitions/Leagues"
+    }
+  }
+}
+        {code}
+    ----
+
+    h3. findSports
+    {status:colour=Yellow|title=get|subtle=false}
+    {code}
+    get /sports
+    {code}
+    *Summary:* 
+    *Description:* Returns all sports from the system that the user has access to. 
+
+
+    h4. Parameters
+
+
+
+        h5. Query Parameters
+        ||Name||Description||Required||Default||Pattern||
+        |ids |A comma-separated list of sport ids |(x) | |  |
+
+|tags |Tags to filter by |(x) | |  |
+
+|limit |Amount of results (default: 50) (maximum: 250)  |(x) | |  |
+
+|page |Page to show (default: 1)  |(x) | |  |
+
+
+
+
+
+    h4. Responses
+        *Status Code:* 200
+        *Message:*     sport response
+        {code:title=Response Type}
+array[Sport]
+        {code}
+        See [#models]
+
+
+
+        {code:title=Response Schema |collapse=true}
+{
+  "description" : "sport response",
+  "schema" : {
+    "type" : "array",
+    "items" : {
+      "$ref" : "#/definitions/Sport"
+    }
+  }
+}
+        {code}
+        *Status Code:* 0
+        *Message:*     unexpected error
+        {code:title=Response Type}
+Error
+        {code}
+        See [#models]
+
+
+
+        {code:title=Response Schema |collapse=true}
+{
+  "description" : "unexpected error",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        {code}
+    ----
+
+h2. Models
+
+        h3. Error
+        ||Field Name||Required||Type||Description||
+         |code | |Integer | |
+ |message | |String | |
+        h3. Leagues
+        ||Field Name||Required||Type||Description||
+         |name | |String | |
+ |tag | |String | |
+        h3. NewSport
+        ||Field Name||Required||Type||Description||
+         |name | |String | |
+ |tag | |String | |
+        h3. Sport
+        ||Field Name||Required||Type||Description||
+         |name | |String | |
+ |tag | |String | |
