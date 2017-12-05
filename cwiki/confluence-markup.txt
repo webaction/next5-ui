@@ -264,6 +264,26 @@ array[Source]
         {code}
         See [#models]
 
+                {code:title=Example application/json |collapse=true }
+                [
+  {
+    id: 1,
+    name: 'Ladbrokes'
+  },
+  {
+    id: 2,
+    name: 'Bookmaker'
+  },
+  {
+    id: 3,
+    name: 'Betstar'
+  },
+  {
+    id: 4,
+    name: 'Sportscast'
+  }
+]
+{code}
 
 
         {code:title=Response Schema |collapse=true}
@@ -274,9 +294,32 @@ array[Source]
     "items" : {
       "$ref" : "#/definitions/Source"
     }
+  },
+  "examples" : {
+    "application/json" : "[\n  {\n    id: 1,\n    name: 'Ladbrokes'\n  },\n  {\n    id: 2,\n    name: 'Bookmaker'\n  },\n  {\n    id: 3,\n    name: 'Betstar'\n  },\n  {\n    id: 4,\n    name: 'Sportscast'\n  }\n]"
   }
 }
         {code}
+            {code:title=Example application/json |collapse=true }
+[
+  {
+    id: 1,
+    name: 'Ladbrokes'
+  },
+  {
+    id: 2,
+    name: 'Bookmaker'
+  },
+  {
+    id: 3,
+    name: 'Betstar'
+  },
+  {
+    id: 4,
+    name: 'Sportscast'
+  }
+]
+            {code}
     ----
 
     h3. findSports
