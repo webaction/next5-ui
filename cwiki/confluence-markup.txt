@@ -264,9 +264,6 @@ array[Source]
         {code}
         See [#models]
 
-                {code:title=Example sources |collapse=true }
-                {id=1, name=Ladbrokes}
-{code}
 
 
         {code:title=Response Schema |collapse=true}
@@ -277,18 +274,9 @@ array[Source]
     "items" : {
       "$ref" : "#/definitions/Source"
     }
-  },
-  "examples" : {
-    "sources" : {
-      "id" : 1,
-      "name" : "Ladbrokes"
-    }
   }
 }
         {code}
-            {code:title=Example sources |collapse=true }
-{id=1, name=Ladbrokes}
-            {code}
     ----
 
     h3. findSports
