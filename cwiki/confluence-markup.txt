@@ -327,23 +327,6 @@ array[Sport]
   }
 }
         {code}
-        *Status Code:* 0
-        *Message:*     unexpected error
-        {code:title=Response Type}
-Error
-        {code}
-        See [#models]
-
-
-
-        {code:title=Response Schema |collapse=true}
-{
-  "description" : "unexpected error",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        {code}
     ----
 
     h3. getHealthCheck
