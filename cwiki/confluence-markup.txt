@@ -455,6 +455,7 @@ h2. Models
          |name | |String | |
  |sourceId | |Long | |
  |active | |Boolean | |
+ |translations | |array[null] | |
         h3. Source
         ||Field Name||Required||Type||Description||
          |id | |Long | |
@@ -464,3 +465,9 @@ h2. Models
          |name | |String | |
  |sourceId | |Long | |
  |active | |Boolean | |
+ |translations | |array[null] | |
+        h3. Translation
+        ||Field Name||Required||Type||Description||
+         |id | |Long | |
+ |name | |String | |
+ |sourceId | |Long | |
