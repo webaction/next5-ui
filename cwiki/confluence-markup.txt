@@ -272,11 +272,15 @@ array[Sport]
                 [
   {
     id: 1,
-    name: 'Soccer'
+    name: 'American Football'
   },
   {
     id: 2,
-    name: 'AFL'
+    name: 'Australian Rules'
+  },
+  {
+    id: 3,
+    name: 'Badminton'
   }
 ]
 {code}
@@ -292,7 +296,7 @@ array[Sport]
     }
   },
   "examples" : {
-    "application/json" : "[\n  {\n    id: 1,\n    name: 'Soccer'\n  },\n  {\n    id: 2,\n    name: 'AFL'\n  }\n]"
+    "application/json" : "[\n  {\n    id: 1,\n    name: 'American Football'\n  },\n  {\n    id: 2,\n    name: 'Australian Rules'\n  },\n  {\n    id: 3,\n    name: 'Badminton'\n  }\n]"
   }
 }
         {code}
@@ -300,11 +304,15 @@ array[Sport]
 [
   {
     id: 1,
-    name: 'Soccer'
+    name: 'American Football'
   },
   {
     id: 2,
-    name: 'AFL'
+    name: 'Australian Rules'
+  },
+  {
+    id: 3,
+    name: 'Badminton'
   }
 ]
             {code}
