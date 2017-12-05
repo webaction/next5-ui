@@ -258,37 +258,20 @@ array[Leagues]
 
     h4. Responses
         *Status Code:* 200
-        *Message:*     source response
+        *Message:*     Get all data sources
         {code:title=Response Type}
 array[Source]
         {code}
         See [#models]
 
-                {code:title=Example application/json |collapse=true }
-                [
-  {
-    id: 1,
-    name: 'Ladbrokes'
-  },
-  {
-    id: 2,
-    name: 'Bookmaker'
-  },
-  {
-    id: 3,
-    name: 'Betstar'
-  },
-  {
-    id: 4,
-    name: 'Sportscast'
-  }
-]
+                {code:title=Example sources |collapse=true }
+                {id=1, name=Ladbrokes}
 {code}
 
 
         {code:title=Response Schema |collapse=true}
 {
-  "description" : "source response",
+  "description" : "Get all data sources",
   "schema" : {
     "type" : "array",
     "items" : {
@@ -296,29 +279,15 @@ array[Source]
     }
   },
   "examples" : {
-    "application/json" : "[\n  {\n    id: 1,\n    name: 'Ladbrokes'\n  },\n  {\n    id: 2,\n    name: 'Bookmaker'\n  },\n  {\n    id: 3,\n    name: 'Betstar'\n  },\n  {\n    id: 4,\n    name: 'Sportscast'\n  }\n]"
+    "sources" : {
+      "id" : 1,
+      "name" : "Ladbrokes"
+    }
   }
 }
         {code}
-            {code:title=Example application/json |collapse=true }
-[
-  {
-    id: 1,
-    name: 'Ladbrokes'
-  },
-  {
-    id: 2,
-    name: 'Bookmaker'
-  },
-  {
-    id: 3,
-    name: 'Betstar'
-  },
-  {
-    id: 4,
-    name: 'Sportscast'
-  }
-]
+            {code:title=Example sources |collapse=true }
+{id=1, name=Ladbrokes}
             {code}
     ----
 
