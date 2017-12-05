@@ -439,6 +439,9 @@ h2. Models
  |sourceId | |Long | |
  |active | |Boolean | |
  |translations | |array[Translation] | |
+        h3. ResourceLink
+        ||Field Name||Required||Type||Description||
+         |href | |String | |
         h3. Source
         ||Field Name||Required||Type||Description||
          |id | |Long | |
