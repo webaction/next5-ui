@@ -298,8 +298,6 @@ array[Source]
 
 |ids |A comma-separated list of sport ids |(x) | |  |
 
-|tags |Tags to filter by |(x) | |  |
-
 |limit |Amount of results (default: 50) (maximum: 250)  |(x) | |  |
 
 |page |Page to show (default: 1)  |(x) | |  |
@@ -310,7 +308,7 @@ array[Source]
 
     h4. Responses
         *Status Code:* 200
-        *Message:*     sport response
+        *Message:*     Get all sports for a given source
         {code:title=Response Type}
 array[Sport]
         {code}
@@ -320,7 +318,7 @@ array[Sport]
 
         {code:title=Response Schema |collapse=true}
 {
-  "description" : "sport response",
+  "description" : "Get all sports for a given source",
   "schema" : {
     "type" : "array",
     "items" : {
@@ -455,8 +453,8 @@ h2. Models
         h3. NewSport
         ||Field Name||Required||Type||Description||
          |name | |String | |
- |tag | |String | |
  |sourceId | |Long | |
+ |active | |Boolean | |
         h3. Source
         ||Field Name||Required||Type||Description||
          |id | |Long | |
@@ -464,5 +462,5 @@ h2. Models
         h3. Sport
         ||Field Name||Required||Type||Description||
          |name | |String | |
- |tag | |String | |
  |sourceId | |Long | |
+ |active | |Boolean | |
