@@ -144,7 +144,7 @@ Error
 
     h4. Responses
         *Status Code:* 200
-        *Message:*     pet response
+        *Message:*     sport response
         {code:title=Response Type}
 Sport
         {code}
@@ -154,7 +154,7 @@ Sport
 
         {code:title=Response Schema |collapse=true}
 {
-  "description" : "pet response",
+  "description" : "sport response",
   "schema" : {
     "$ref" : "#/definitions/Sport"
   }
