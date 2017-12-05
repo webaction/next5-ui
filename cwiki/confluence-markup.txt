@@ -198,7 +198,7 @@ Error
 
         h5. Query Parameters
         ||Name||Description||Required||Default||Pattern||
-        |ids |Ids to filter by |(x) | |  |
+        |ids |IDs to filter by |(x) | |  |
 
 |tags |Tags to filter by |(x) | |  |
 
@@ -296,7 +296,7 @@ array[Source]
         ||Name||Description||Required||Default||Pattern||
         |sourceId |Source data ID |(/) | |  |
 
-|ids |A comma-separated list of sport ids |(x) | |  |
+|ids |A comma-separated list of sport IDs |(x) | |  |
 
 |limit |Amount of results (default: 50) (maximum: 250)  |(x) | |  |
 
