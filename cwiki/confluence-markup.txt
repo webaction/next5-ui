@@ -127,7 +127,7 @@ Error
     get /sports/{id}
     {code}
     *Summary:* 
-    *Description:* Returns a user based on a single ID, if the user does not have access to the pet
+    *Description:* Returns a user based on a single ID, if the user does not have access to the sport
 
 
     h4. Parameters
