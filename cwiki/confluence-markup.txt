@@ -316,22 +316,6 @@ array[Sport]
         {code}
         See [#models]
 
-                {code:title=Example application/json |collapse=true }
-                [
-  {
-    id: 1,
-    name: 'American Football'
-  },
-  {
-    id: 2,
-    name: 'Australian Rules'
-  },
-  {
-    id: 3,
-    name: 'Badminton'
-  }
-]
-{code}
 
 
         {code:title=Response Schema |collapse=true}
@@ -342,28 +326,9 @@ array[Sport]
     "items" : {
       "$ref" : "#/definitions/Sport"
     }
-  },
-  "examples" : {
-    "application/json" : "[\n  {\n    id: 1,\n    name: 'American Football'\n  },\n  {\n    id: 2,\n    name: 'Australian Rules'\n  },\n  {\n    id: 3,\n    name: 'Badminton'\n  }\n]"
   }
 }
         {code}
-            {code:title=Example application/json |collapse=true }
-[
-  {
-    id: 1,
-    name: 'American Football'
-  },
-  {
-    id: 2,
-    name: 'Australian Rules'
-  },
-  {
-    id: 3,
-    name: 'Badminton'
-  }
-]
-            {code}
         *Status Code:* 0
         *Message:*     unexpected error
         {code:title=Response Type}
