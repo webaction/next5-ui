@@ -233,6 +233,52 @@ array[Leagues]
         {code}
     ----
 
+    h3. findSources
+    {status:colour=Yellow|title=get|subtle=false}
+    {code}
+    get /sources
+    {code}
+    *Summary:* 
+    *Description:* Retrieve all data sources 
+
+
+    h4. Parameters
+
+
+
+        h5. Query Parameters
+        ||Name||Description||Required||Default||Pattern||
+        |limit |Amount of results (default: 50) (maximum: 250)  |(x) | |  |
+
+|page |Page to show (default: 1)  |(x) | |  |
+
+
+
+
+
+    h4. Responses
+        *Status Code:* 200
+        *Message:*     source response
+        {code:title=Response Type}
+array[Source]
+        {code}
+        See [#models]
+
+
+
+        {code:title=Response Schema |collapse=true}
+{
+  "description" : "source response",
+  "schema" : {
+    "type" : "array",
+    "items" : {
+      "$ref" : "#/definitions/Source"
+    }
+  }
+}
+        {code}
+    ----
+
     h3. findSports
     {status:colour=Yellow|title=get|subtle=false}
     {code}
@@ -248,7 +294,9 @@ array[Leagues]
 
         h5. Query Parameters
         ||Name||Description||Required||Default||Pattern||
-        |ids |A comma-separated list of sport ids |(x) | |  |
+        |sourceId |Source data ID |(/) | |  |
+
+|ids |A comma-separated list of sport ids |(x) | |  |
 
 |tags |Tags to filter by |(x) | |  |
 
@@ -443,6 +491,10 @@ h2. Models
         ||Field Name||Required||Type||Description||
          |name | |String | |
  |tag | |String | |
+        h3. Source
+        ||Field Name||Required||Type||Description||
+         |id | |Long | |
+ |name | |String | |
         h3. Sport
         ||Field Name||Required||Type||Description||
          |name | |String | |
